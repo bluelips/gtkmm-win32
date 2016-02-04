@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ImportGroup Label="PropertySheets">
+		<Import Project="cairomm-build-defines.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros">
+		<BinDir>$(SolutionDir)$(Configuration)\$(Platform)\bin</BinDir>
+		<InstalledReleaseDlls>$(BinDir)\cairomm$(ReleaseDllSuffix).dll</InstalledReleaseDlls>
+		<InstalledDebugDlls>$(BinDir)\cairomm$(DebugDllSuffix).dll</InstalledDebugDlls>
+		<CairommDoInstall>
+
+			mkdir $(CopyDir)
+			mkdir $(CopyDir)\bin
+
+			if "$(Configuration)" == "Release" copy "$(BinDir)\cairomm$(ReleaseDllSuffix).dll" "$(CopyDir)\bin"
+			if "$(Configuration)" == "Debug" copy "$(BinDir)\cairomm$(DebugDllSuffix).dll" "$(CopyDir)\bin"
+
+			mkdir $(CopyDir)\lib\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\include
+
+			if "$(Configuration)" == "Release" copy "$(BinDir)\cairomm$(ReleaseDllSuffix).lib" "$(CopyDir)\lib"
+			if "$(Configuration)" == "Debug" copy "$(BinDir)\cairomm$(DebugDllSuffix).lib" "$(CopyDir)\lib"
+
+			mkdir $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)
+			copy ..\cairomm\cairomm.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)
+			
+			mkdir $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+
+			copy ..\cairomm\context.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\context_private.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\device.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\enums.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\exception.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\fontface.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\fontoptions.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\matrix.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\path.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\pattern.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\private.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\quartz_font.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\quartz_surface.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\refptr.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\region.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\scaledfont.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\script.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\script_surface.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\surface.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\types.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\win32_font.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\win32_surface.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+			copy ..\cairomm\xlib_surface.h $(CopyDir)\include\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\cairomm
+
+			copy .\cairomm\cairommconfig.h $(CopyDir)\lib\cairomm-$(ApiMajorVersion).$(ApiMinorVersion)\include
+			
+		</CairommDoInstall>
+	</PropertyGroup>
+	<PropertyGroup>
+		<_PropertySheetDisplayName>cairomminstallprops</_PropertySheetDisplayName>
+	</PropertyGroup>
+	<ItemGroup>
+		<BuildMacro Include="BinDir">
+			<Value>$(BinDir)</Value>
+		</BuildMacro>
+		<BuildMacro Include="InstalledReleaseDlls">
+			<Value>$(InstalledReleaseDlls)</Value>
+		</BuildMacro>
+		<BuildMacro Include="InstalledDebugDlls">
+			<Value>$(InstalledDebugDlls)</Value>
+		</BuildMacro>
+		<BuildMacro Include="AtkmmDoInstall">
+			<Value>$(AtkmmDoInstall)</Value>
+		</BuildMacro>
+	</ItemGroup>
+</Project>

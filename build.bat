@@ -1,29 +1,38 @@
-set GTK3_ROOT=C:\gtk-build
+if %GTK3_ROOT%=="" set GTK3_ROOT=c:\gtk-build
+
+set GTK3_TARGET=%GTK3_ROOT%\gtk
 
 set GTKMM_ROOT=%CD%
 set GTKMM_BUILD_ROOT=%GTKMM_ROOT%\build
+set GTKMM_TARGET=%GTKMM_ROOT%\gtkmm
 
 set TMP_PATH=%PATH%
-set PATH=%GTKMM_ROOT%\gtk\Win32\bin;%PATH%
+set PATH=%GTK3_TARGET%\Win32\bin;%PATH%
 
 set TMP_INCLUDE=%INCLUDE%"
 set INCLUDE=%GTKMM_ROOT%\.extra;%INCLUDE%
 
-set INCLUDE=%GTK3_ROOT%\gtk\Win32\include;%INCLUDE%
-set INCLUDE=%GTK3_ROOT%\gtk\Win32\include\glib-2.0;%INCLUDE%
-set INCLUDE=%GTK3_ROOT%\gtk\Win32\lib\glib-2.0\include;%INCLUDE%
-set INCLUDE=%GTK3_ROOT%\gtk\Win32\include\gtk-3.0;%INCLUDE%
-set INCLUDE=%GTK3_ROOT%\gtk\Win32\include\gdk-pixbuf-2.0;%INCLUDE%
-set INCLUDE=%GTK3_ROOT%\gtk\Win32\include\atk-1.0;%INCLUDE%
-set INCLUDE=%GTK3_ROOT%\gtk\Win32\include\pango-1.0;%INCLUDE%
+set INCLUDE=%GTK3_TARGET%\Win32\include;%INCLUDE%
+set INCLUDE=%GTK3_TARGET%\Win32\include\glib-2.0;%INCLUDE%
+set INCLUDE=%GTK3_TARGET%\Win32\lib\glib-2.0\include;%INCLUDE%
+set INCLUDE=%GTK3_TARGET%\Win32\include\gtk-3.0;%INCLUDE%
+set INCLUDE=%GTK3_TARGET%\Win32\include\gdk-pixbuf-2.0;%INCLUDE%
+set INCLUDE=%GTK3_TARGET%\Win32\include\atk-1.0;%INCLUDE%
+set INCLUDE=%GTK3_TARGET%\Win32\include\pango-1.0;%INCLUDE%
 
-set INCLUDE=%GTKMM_ROOT%\gtkmm\Win32\include\sigc++-2.0;%INCLUDE%
-set INCLUDE=%GTKMM_ROOT%\gtkmm\Win32\lib\sigc++-2.0\include\sigc++config.h;%INCLUDE%
-set INCLUDE=%GTKMM_ROOT%\gtkmm\Win32\include\cairomm-1.12;%INCLUDE%
-set INCLUDE=%GTKMM_ROOT%\gtkmm\Win32\include\pangomm-1.4;%INCLUDE%
+set INCLUDE=%GTKMM_TARGET%\Win32\include\sigc++-2.0;%INCLUDE%
+set INCLUDE=%GTKMM_TARGET%\Win32\lib\sigc++-2.0\include;%INCLUDE%
+set INCLUDE=%GTKMM_TARGET%\Win32\include\glibmm-2.4;%INCLUDE%
+set INCLUDE=%GTKMM_TARGET%\Win32\include\giomm-2.4;%INCLUDE%
+set INCLUDE=%GTKMM_TARGET%\Win32\lib\glibmm-2.4\include;%INCLUDE%
+set INCLUDE=%GTKMM_TARGET%\Win32\lib\giomm-2.4\include;%INCLUDE%
+set INCLUDE=%GTKMM_TARGET%\Win32\include\cairomm-1.0;%INCLUDE%
+set INCLUDE=%GTKMM_TARGET%\Win32\include\pangomm-1.4;%INCLUDE%
+set INCLUDE=%GTKMM_TARGET%\Win32\lib\pangomm-1.4\include;%INCLUDE%
+set INCLUDE=%GTKMM_TARGET%\Win32\include\atkmm-1.6;%INCLUDE%
 
-set LIB="%GTK3_ROOT%\gtk\Win32\lib;%LIB%"
-set LIB="%GTKMM_ROOT%\gtkmm\Win32\lib;%LIB%" 
+set LIB=%GTK3_TARGET%\Win32\lib;%LIB%
+set LIB=%GTKMM_TARGET%\Win32\lib;%LIB%
 
 set UseEnv=true
 
