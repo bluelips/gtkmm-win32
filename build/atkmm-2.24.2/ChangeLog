@@ -1,0 +1,511 @@
+2015-11-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Require a recent glibmm.
+
+	To use the latest gmmproc.
+
+2015-11-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Regenerate atk_docs.xml.
+
+2015-10-27  Murray Cumming  <murrayc@murrayc.com>
+
+	--enable-warnings=fatal: Use the same warnings as glibmm and gtkmm.
+
+2015-09-22  Murray Cumming  <murrayc@murrayc.com>
+
+	2.24.1
+
+2015-09-21  Murray Cumming  <murrayc@murrayc.com>
+
+	2.24.0
+
+2015-09-17  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	Update .gitignore for MSVC-Specific Items
+
+2015-09-10  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	MSVC Builds: Update Project Files
+
+	A newly-added source was missing from the build, so make up for it.
+
+2015-09-10  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	MSVC Builds: Update .sln File to 2013 Format
+
+	The solution file needs to be updated as well...
+
+2015-09-10  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	MSVC Builds: Improve Build Speed and Debugging Experience
+
+	Use multiprocessor compilation, which can cut down build times by quite a
+	bit, and use /d2Zi+ to put more useful info into the .pdb's in release
+	builds.
+
+2015-09-10  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	MSVC Builds: Support Visual Studio 2013 (and later) Only
+
+	atkmm now requires a C++-11-capable compiler in order to build it, which is
+	equivilant to Visual Studio 2013 and later, so we:
+
+	-Drop the Visual Studio 2005 and 2008 projects
+	-Move the 2010 projects to become 2013 projects, as their formats are
+	largely the same.
+
+2015-09-03  Murray Cumming  <murrayc@murrayc.com>
+
+	2.23.3
+
+2015-08-22  Murray Cumming  <murrayc@murrayc.com>
+
+	configure.ac: Require the latest glibmm.
+
+	To use the latest gmmproc, which generates more move operations,
+	and to have the latest Glib::Object/ObjectBase/Interface which have
+	move operations that those generated move operations call.
+
+2015-07-15  Murray Cumming  <murrayc@murrayc.com>
+
+	2.23.2
+
+2015-07-15  Murray Cumming  <murrayc@murrayc.com>
+
+	Require the latest glibmm.
+
+	For the latest gmmproc.
+
+2015-07-15  Murray Cumming  <murrayc@murrayc.com>
+
+	configure.ac: Use MM_AX_CXX_COMPILE_STDCXX_11() from mm-common.
+
+	Instead of a copy of AX_CXX_COMPILE_STDCXX_11().
+
+2015-07-11  Murray Cumming  <murrayc@murrayc.com>
+
+	Require C++11.
+
+	configure.ac: Use AX_CXX_COMPILE_STDCXX_11 to check for compiler
+	support for C++11 and use it (--std=c++11 for current versions of
+	g++).
+
+	Among other reasons, this is because glibmm now requires C++11,
+	and its gmmrpoc generates C++11 code.
+
+2015-06-30  Murray Cumming  <murrayc@murrayc.com>
+
+	2.231
+
+2015-06-30  Murray Cumming  <murrayc@murrayc.com>
+
+	configure.ac: Require the latest glibmm.
+
+	To use the latest gmmproc, which generates nicer code for use of
+	deprecated C API.
+
+2015-06-29  Murray Cumming  <murrayc@murrayc.com>
+
+	configure.ac: Re-enable deprecation warnings as errors.
+
+	When using --enable-warnings=fatal.
+
+2015-06-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Text: Add get_string_at_offset(), deprecating other methods for it.
+
+2015-06-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Table: Deprecate get_column/row_at_index().
+
+	The C documentation doesn't have real deprecation documentation for these,
+	so neither do we.
+
+2015-06-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Table: Add a get_at() const version and deprecate get_index_at().
+
+2015-06-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Document: get_document_type(): Really use the deprecated option.
+
+2015-06-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Remove #undefs of ATK_DISABLE_DEPRECATED to use deprecated API.
+
+	This is no longer necessary with the latest gmmproc.
+
+2015-06-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Value: _IGNORE() get_minimum_increment().
+
+2015-06-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Value: deprecate get_minimum/maximum_range().
+
+	Adding Range so we can add get_range() as their replacement.
+
+2015-06-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Component: Deprecate add/remove_focus_handler, get_size() and get_position().
+
+2015-06-29  Murray Cumming  <murrayc@murrayc.com>
+
+	Value: Add get_value_and_text(), get_increment(), and set_value().
+
+	Deprecating get_current_value() and set_current_value().
+
+2015-03-24  Murray Cumming  <murrayc@murrayc.com>
+
+	Text: Avoid the new-style deprecation warning.
+
+2015-03-24  Murray Cumming  <murrayc@murrayc.com>
+
+	Regenerated *_docs.xml file.
+
+2015-03-24  Murray Cumming  <murrayc@murrayc.com>
+
+	Regenerated .defs files.
+
+2015-03-24  Murray Cumming  <murrayc@murrayc.com>
+
+	Document: Add get/set_attribute() and deprecate get_document() and get_document_type().
+
+2014-09-22  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	MSVC 2008/2010 Projects: Add "Install" Project
+
+	This adds a "install" project for the Visual Studio 2008 and 2010 projects
+	so that the builds results can be copied to a common directory together
+	with the depedencies so that they can be integrated and tested together,
+	and will help to simplify deployment.
+
+	* MSVC_Net2008/atkmm-install.vsprops:
+	* MSVC_Net2008/install.vcproj:
+	* MSVC_Net2010/atkmm-install.props:
+	* MSVC_Net2010/install.vcxproj: Add project files and property sheets to
+	copy the build results to a common directory in the build root directory.
+	* MSVC_Net2008/atkmm.sln:
+	* MSVC_Net2010/atkmm.sln: Include the "install" project in the build.
+	* MSVC_Net2008/filelist.am: Distribute the newly-added project files and
+	property sheets.
+
+2014-09-19  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	Overhaul the Visual Studio 2010 Projects
+
+	Give the Visual Studio 2010 Projects an overhaul, by using property sheets
+	to consolidate commonly-used items, so to ease future maintenance, and move
+	all the projects to MSVC_Net2010.
+
+	* MSVC_Net2010/atkmm-build-defines.props:
+	* MSVC_Net2010/atkmm-version-paths.props: Add property sheets to
+	consolidate the commonly-used items, so that projects can refer
+	to them.
+	* MSVC_Net2010/gendef/gendef.vcxproj:
+	* MSVC_Net2010/gendef/gendef.vcxproj.filters:
+	* MSVC_Net2010/atkmm/atkmm.vcxproj:
+	* MSVC_Net2010/atkmm/atkmm.vcxproj.filters: Clean up using the
+	property sheets, and move to MSVC_Net2010/.  Adjust the file
+	paths accordingly, and add a PlatformToolset tag so that it would
+	be easier to support Visual Studio 2012/2013.  Also produce
+	.pdb files for Release builds.
+	* MSVC_Net2010/atkmm.sln:
+	* MSVC_Net2010/filelist.am: Adjust file paths accordingly.
+
+2014-09-19  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	Overhaul the Visual Studio 2008 Projects
+
+	Overhaul the Visual Studio 2008 Projects by using property sheets to
+	consolidate commonly-used items, so that projects can refer to them, which
+	will help to simplify future maintenance, and move all the projects to
+	MSVC_Net2008/.
+
+	* MSVC_Net2008/atkmm-build-defines.vsprops:
+	* MSVC_Net2008/atkmm-version-paths.vsprops: Added property sheet
+	files used to consolidate commonly-used items to be referred to
+	from the projects.
+	* MSVC_Net2008/gendef/gendef.vcproj:
+	* MSVC_Net2008/atkmm/atkmm.vcproj: Move to MSVC_Net2008/, and
+	clean up by using the property sheets.  Adjust the source file
+	paths accordingly.
+	* MSVC_Net2008/atkmm.sln:
+	* MSVC_Net2008/filelist.am: Adjust file paths accordingly.
+
+2014-09-17  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	Cleanup and Fix Visual Studio 2008/2010 Projects
+
+	We don't need to include blank.cpp in our builds, as the IDE recognize .cc
+	files, and building with /vd2 brings more trouble than benefit, causing
+	weird crashes.
+
+	* MSVC_Net2008/gendef/gendef.vcproj: Don't include blank.cpp in the
+	builds, it's not needed.
+	* MSVC_Net2008/atkmm/atkmm.vcproj: Don't include blank.cpp in the
+	builds, it's not needed.  Don't compile with /vd2 as it is a
+	source of weird crashes, such as in the gtkmm demo program.
+	* MSVC_Net2010/atkmm/atkmm.vcxproj: Don't compile with /vd2 as it
+	is a source of weird crashes, such as in the gtkmm demo program.
+
+2014-09-11  Kjell Ahlstedt  <kjell.ahlstedt@bredband.net>
+
+	doap: Add description, download-page, bug-database, programming-language
+
+2014-07-30  Olav Vitters  <olav@vitters.nl>
+
+	doap category core
+
+2013-09-09  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	Update the MSVC Project Files
+
+	* MSVC_Net2005/gendef/gendef.vcproj:
+	MSVC_Net2008/gendef/gendef.vcproj:
+	MSVC_Net2010/gendef/gendef.vcxproj:
+	MSVC_Net2005/atkmm/atkmm.vcproj:
+	MSVC_Net2008/atkmm/atkmm.vcproj:
+	MSVC_Net2010/atkmm/atkmm.vcxproj: Clean up the project files by purging
+	unneeded entries, macros and whitespace.
+
+	Also improve on the project files by adding to the
+	AdditionalIncludeDirectories and AdditionalLibraryDirectories so that
+	they can find and use the deps from a local build directory instead
+	of using builds in the global include and libs path.  This is useful when
+	we are building an unstable release as unstable releases usually require
+	the latest unstable releases of their respective deps, which we do not
+	usually want to place where they are used globally.
+
+	Fix the last commit to the ChangeLog file, as I forgot to change the
+	email address in my last commit.
+
+2013-09-09  Chun-wei Fan  <fanchunwei@src.gnome.org>
+
+	MSVC Solution Files: Use DOS Line Endings
+
+	* MSVC_Net2005/atkmm.sln:
+	* MSVC_Net2008/atkmm.sln:
+	* MSVC_Net2010/atkmm.sln: Use DOS/Windows line endings as Visual
+	Studio expects .sln files to have DOS/Windows line endings in order to
+	determine the Visual Studio version to use to open the .sln files.
+
+2013-06-27  Kjell Ahlstedt  <kjell.ahlstedt@bredband.net>
+
+	Update .gitignore.
+
+	* .gitignore: Add files that are copied to or generated in doc/ and
+	MSVC_Net2010/atkmm/.
+
+2013-06-27  Kjell Ahlstedt  <kjell.ahlstedt@bredband.net>
+
+	Update Doxyfile.in.
+
+	* doc/reference/Doxyfile.in: Update for doxygen 1.8.3. Make it more similar
+	to glibmm's and mm-common/skeletonmm's Doxyfile.in.
+
+2013-06-27  Kjell Ahlstedt  <kjell.ahlstedt@bredband.net>
+
+	Update atk_docs.xml and most .defs files.
+
+	* codegen/extradefs/generate_extra_defs_atk.cc: Added get_defs() for new
+	ATK_TYPEs.
+	* atk/src/atk_docs.xml:
+	* atk/src/atk_enums.defs:
+	* atk/src/atk_methods.defs: Generated by generate_defs_and_docs.sh.
+	* atk/src/atk_signals.defs: Generated by generate_defs_and_docs.sh. Two lines
+	modified manually (indicated by comments).
+
+2013-06-27  Kjell Ahlstedt  <kjell.ahlstedt@bredband.net>
+
+	Add the generate_defs_and_docs.sh script.
+
+	* codegen/generate_defs_and_docs.sh: New file. Script that generates
+	atk_docs.xml and most .defs files.
+	* codegen/Makefile.am: Distribute generate_defs_and_docs.sh.
+
+2013-06-25  Kjell Ahlstedt  <kjell.ahlstedt@bredband.net>
+
+	Atk::Text: Deprecate get_text_before_offset(), get_text_after_offset().
+
+	* configure.ac: Don't treat the deprecated-declarations warning as an error,
+	not even when --enable-warnings=fatal.
+	* atk/src/text.hg: Deprecate get_text_before_offset() and
+	get_text_after_offset() and the corresponding virtual functions. They have
+	been deprecated in atk. Bug #703027.
+
+2013-04-24  Murray Cumming  <murrayc@murrayc.com>
+
+	2.22.7
+
+2012-10-26  José Alburquerque  <jaalburqu@svn.gnome.org>
+
+	Remove the use of g_type_init() because it has been deprecated.
+
+	* codegen/extradefs/generate_extra_defs_atk.cc: The docs for the
+	function says that the GType system is initialized automatically now
+	as of glib-2.36.
+
+2011-10-26  Murray Cumming  <murrayc@murrayc.com>
+
+	2.22.6
+
+2011-10-25  Murray Cumming  <murrayc@murrayc.com>
+
+	Add #includes needed with the latest glibmm.
+
+	* atk/src/action.hg:
+	* atk/src/component.hg:
+	* atk/src/document.hg:
+	* atk/src/object.hg:
+	* atk/src/relation.hg:
+	* atk/src/selection.hg:
+	* atk/src/stateset.hg:
+	* atk/src/streamablecontent.hg:
+	* atk/src/table.hg:
+	* atk/src/text.hg:
+	* atk/src/value.hg: Add individual includes now that gmmproc does not
+	add #include glibmm.h at the top of every generated header.
+
+2011-09-22  Krzesimir Nowak  <qdlacz@gmail.com>
+
+	Don't use obsolete macros.
+
+	* autogen.sh: Warn about everything during autoreconf.
+	* configure.ac: Replaced obsolete macros with their modern counterparts.
+
+2011-03-30  Murray Cumming  <murrayc@murrayc.com>
+
+	2.22.5
+
+2011-03-30  Murray Cumming  <murrayc@murrayc.com>
+
+	Use the latest mm-common.
+
+	* configure.ac: Require the latest version.
+	* doc/Makefile.am: Don't specify the mm-common .pl files to distribute
+	because mm-common now does this automatically.
+
+2011-03-26  Kalev Lember  <kalev@smartlink.ee>
+
+	Install the m4 files without --enable-maintainer-mode
+
+	* Makefile.am: Install the convert.m4 files even if we aren't in
+	maintainer mode; this makes sure distro packages pick up the files.
+
+2011-03-25  Murray Cumming  <murrayc@murrayc.com>
+
+	2.22.4
+
+2011-03-25  Murray Cumming  <murrayc@murrayc.com>
+
+	Avoid a tarball dependency on mm-common.
+
+	* configure.ac: Add a call to MM_CONFIG_DOCTOOL_DIR() telling it to
+	copy the files locally and use them from there.
+	* doc/Makefile.am: Dist the copied files, so that the build does not
+	try to use the versions installed by mm-common.
+
+2011-03-23  Murray Cumming  <murrayc@murrayc.com>
+
+	2.22.3
+
+2011-01-08  Murray Cumming  <murrayc@murrayc.com>
+
+	2.22.2
+
+2011-01-07  Murray Cumming  <murrayc@murrayc.com>
+
+	Allow other modules to use the m4 files.
+
+	* codegen/Makefile.am: Install the m4 files, like gtkmm installs its files.
+	* atk/atkmm.pc.in: Add the gmmproc4mdir variable so that other modules such
+	as gtkmm and cluttermm can get the path to the m4 file, to avoid
+	duplicating its contents.
+
+2011-01-07  Murray Cumming  <murrayc@murrayc.com>
+
+	Fix the build with --enable-warnings=fatal.
+
+	* configure.ac: Add no-long-long to avoid a warning caused by a newer glib.
+	Also avoid use of deprecated GLIBMM API and make sure that GSEAL is defined.
+
+2010-11-20  Murray Cumming  <murrayc@murrayc.com>
+
+	2.22.1
+
+2010-11-20  Murray Cumming  <murrayc@murrayc.com>
+
+	Add and distribute COPYING.tools containing the GPL.
+
+	* COPYING.tools: This is necessary because the MSVC gendef.cc tool sources
+	are under the GPL, not LGPL. They don't affect the licensing of the library
+	itself.
+
+2010-10-01  Armin Burgmeier  <armin@arbur.net>
+
+	Add support for MSVC 2010 and 64 bit to MSVC project files
+
+2010-10-01  Armin Burgmeier  <armin@arbur.net>
+
+	* MSVC_Net2005/atkmm.sln:
+	* MSVC_Net2005/atkmm/atkmm.vcproj:
+	* MSVC_Net2005/gendef/gendef.vcproj:
+	* MSVC_Net2008/atkmm.sln:
+	* MSVC_Net2008/atkmm/atkmm.vcproj:
+	* MSVC_Net2008/gendef/gendef.vcproj:
+	* MSVC_Net2010/atkmm.sln:
+	* MSVC_Net2010/atkmm/atkmm.rc.in:
+	* MSVC_Net2010/atkmm/atkmm.vcxproj:
+	* MSVC_Net2010/atkmm/atkmm.vcxproj.filters:
+	* MSVC_Net2010/filelist.am:
+	* MSVC_Net2010/gendef/gendef.cc:
+	* MSVC_Net2010/gendef/gendef.vcxproj:
+	* MSVC_Net2010/gendef/gendef.vcxproj.filters:
+	* Makefile.am:
+	* configure.ac: Add support for MSVC 2010 and 64 bit.
+
+2010-09-27  Murray Cumming  <murrayc@murrayc.com>
+
+	2.22.0
+
+2010-09-26  Armin Burgmeier  <armin@arbur.net>
+
+	Fix MSVC project files
+
+2010-09-26  Armin Burgmeier  <armin@arbur.net>
+
+	Fix MSVC project files.
+
+	* MSVC_Net2005/atkmm.sln:
+	* MSVC_Net2008/atkmm.sln:
+
+2010-09-20  Murray Cumming  <murrayc@murrayc.com>
+
+	2.21.1
+
+2010-06-28  Murray Cumming  <murrayc@murrayc.com>
+
+	Documentation: Added main page.
+
+	* atk/atkmm.h: Added text based on pangomm.h from pangomm.
+
+2010-06-23  Murray Cumming  <murrayc@murrayc.com>
+
+	2.21.1
+
+2010-06-23  Murray Cumming  <murrayc@murrayc.com>
+
+	Reduce version to 2.21, because atkmm has not broken ABI (yet?)
+
+	* configure.ac: Reduce the tarball version.
+
+2010-06-23  Murray Cumming  <murrayc@murrayc.com>
+
+	Correct the ChangeLog. It is not autogenerated.
+
+2010-06-23  Daniel Elstner  <danielk@openismus.com>
+
+	Create new atkmm module, split off from gtkmm
+
