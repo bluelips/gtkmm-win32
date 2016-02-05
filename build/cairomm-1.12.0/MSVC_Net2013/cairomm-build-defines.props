@@ -5,8 +5,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros">
     <CairoMMBuildDefs>CAIROMM_BUILD</CairoMMBuildDefs>
-    <CPPDepLibsRelease>sigc-2_0.lib</CPPDepLibsRelease>
-    <CPPDepLibsDebug>sigc-d-2_0.lib</CPPDepLibsDebug>
+    <CPPDepLibsRelease>sigc-2.0.lib;cairo.lib</CPPDepLibsRelease>
+    <CPPDepLibsDebug>sigc-2.0-d.lib;cairo-d.lib</CPPDepLibsDebug>
   </PropertyGroup>
   <PropertyGroup>
     <_PropertySheetDisplayName>cairommbuilddefinesprops</_PropertySheetDisplayName>
@@ -19,7 +19,7 @@
       <ForcedIncludeFiles>msvc_recommended_pragmas.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>cairo.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(GlibEtcInstallRoot)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

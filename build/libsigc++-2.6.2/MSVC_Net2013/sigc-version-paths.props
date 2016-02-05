@@ -7,8 +7,8 @@
     <DefDir>$(SolutionDir)$(Configuration)\$(Platform)\obj\$(ProjectName)\</DefDir>
     <ApiMajorVersion>2</ApiMajorVersion>
     <ApiMinorVersion>0</ApiMinorVersion>
-    <ReleaseDllSuffix>-$(ApiMajorVersion)_$(ApiMinorVersion)</ReleaseDllSuffix>
-    <DebugDllSuffix>-d-$(ApiMajorVersion)_$(ApiMinorVersion)</DebugDllSuffix>
+    <ReleaseDllSuffix>-$(ApiMajorVersion).$(ApiMinorVersion)</ReleaseDllSuffix>
+    <DebugDllSuffix>-$(ApiMajorVersion).$(ApiMinorVersion)-d</DebugDllSuffix>
   </PropertyGroup>
   <PropertyGroup>
     <_PropertySheetDisplayName>sigcversionpathsprops</_PropertySheetDisplayName>

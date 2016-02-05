@@ -6,8 +6,8 @@
   <PropertyGroup Label="UserMacros">
     <GdkMMBuildDefs>GDKMM_BUILD</GdkMMBuildDefs>
     <GtkMMBuildDefs>GTKMM_BUILD</GtkMMBuildDefs>
-    <CPPDepLibsRelease>atkmm-1_6.lib;pangomm-1_4.lib;giomm-2_4.lib;glibmm-2_4.lib;cairomm-1_0.lib;sigc-2_0.lib</CPPDepLibsRelease>
-    <CPPDepLibsDebug>atkmm-d-1_6.lib;pangomm-d-1_4.lib;giomm-d-2_4.lib;glibmm-d-2_4.lib;cairomm-d-1_0.lib;sigc-d-2_0.lib</CPPDepLibsDebug>
+    <CPPDepLibsRelease>atkmm-1.6.lib;pangomm-1.4.lib;giomm-2.4.lib;glibmm-2.4.lib;cairomm-1.0.lib;sigc-2.0.lib;gtk-3.0.lib;gdk-3.0.lib;gdk_pixbuf-2.0.lib;gobject-2.0.lib;gio-2.0.lib;glib-2.0.lib;epoxy.lib</CPPDepLibsRelease>
+    <CPPDepLibsDebug>atkmm-1.6-d.lib;pangomm-1.4-d.lib;giomm-2.4-d.lib;glibmm-2.4-d.lib;cairomm-1.0-d.lib;sigc-2.0-d.lib;gtk-3.0-d.lib;gdk-3.0-d.lib;gdk_pixbuf-2.0-d.lib;gobject-2.0-d.lib;gio-2.0-d.lib;glib-2.0-d.lib;epoxy-d.lib</CPPDepLibsDebug>
   </PropertyGroup>
   <PropertyGroup>
     <_PropertySheetDisplayName>glibmmbuilddefinesprops</_PropertySheetDisplayName>
@@ -23,7 +23,7 @@
       <AdditionalOptions>/d2Zi+ %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>gtk-3.0.lib;gdk-3.0.lib;gdk_pixbuf-2.0.lib;gobject-2.0.lib;gio-2.0.lib;glib-2.0.lib;epoxy.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(GlibEtcInstallRoot)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
