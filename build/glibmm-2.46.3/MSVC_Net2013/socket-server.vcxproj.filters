@@ -15,6 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\examples\network\socket-server.cc"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\examples\network\resolver.cc" />
   </ItemGroup>
 </Project>

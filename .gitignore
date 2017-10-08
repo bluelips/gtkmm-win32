@@ -8,6 +8,7 @@ gtkmm/**
 # MSVC user settings
 *.suo
 *.vcxproj.user
+**/.vs/**
 
 # MSVC intermediate products
 *.sdf

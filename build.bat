@@ -37,8 +37,8 @@ set LIB=%GTKMM_TARGET%\Win32\lib;%LIB%
 
 set UseEnv=true
 
-set DebugConf="/p:MultiProcessorCompilation=true;Configuration=Debug"
-set ReleaseConf="/p:MultiProcessorCompilation=true;Configuration=Release"
+set DebugConf="/p:MultiProcessorCompilation=true;Configuration=Debug;Platform=Win32"
+set ReleaseConf="/p:MultiProcessorCompilation=true;Configuration=Release;Platform=Win32"
 
 msbuild %GTKMM_BUILD_ROOT%\libsigc++-2.6.2\MSVC_Net2013\libsigc++2.sln %DebugConf%
 msbuild %GTKMM_BUILD_ROOT%\libsigc++-2.6.2\MSVC_Net2013\libsigc++2.sln %ReleaseConf%
