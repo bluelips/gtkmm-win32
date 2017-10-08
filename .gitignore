@@ -1,0 +1,14 @@
+# output
+gtkmm/**
+
+# MSVC Build products
+**/Debug/*
+**/Release/*
+
+# MSVC user settings
+*.suo
+*.vcxproj.user
+
+# MSVC intermediate products
+*.sdf
+*.opensdf

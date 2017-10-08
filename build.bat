@@ -1,4 +1,5 @@
-if %GTK3_ROOT%=="" set GTK3_ROOT=c:\gtk-build
+rem # if %GTK3_ROOT%=="" set GTK3_ROOT=c:\gtk-build
+set GTK3_ROOT=c:\gtk-build
 
 set GTK3_TARGET=%GTK3_ROOT%\gtk
 
@@ -57,5 +58,7 @@ msbuild %GTKMM_BUILD_ROOT%\pangomm-2.38.1\MSVC_Net2013\pangomm.sln %ReleaseConf%
 msbuild %GTKMM_BUILD_ROOT%\gtkmm-3.18.0\MSVC_Net2013\gtkmm.sln %DebugConf%
 msbuild %GTKMM_BUILD_ROOT%\gtkmm-3.18.0\MSVC_Net2013\gtkmm.sln %ReleaseConf%
 
+set GTK_BUILD_INCLUDE=%INCLUDE%
+set GTK_BUILD_PATH=%PATH%
 set INCLUDE=%TMP_INCLUDE%
 set PATH=%TMP_PATH%
