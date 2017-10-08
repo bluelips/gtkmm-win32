@@ -12,3 +12,5 @@ gtkmm/**
 # MSVC intermediate products
 *.sdf
 *.opensdf
+
+untracked/**
