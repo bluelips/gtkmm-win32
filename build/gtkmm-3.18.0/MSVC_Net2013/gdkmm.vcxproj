@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -27,22 +27,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -195,7 +195,7 @@
     <ClCompile Include="..\gdk\gdkmm\color.cc" />
     <ClCompile Include="..\gdk\gdkmm\cursor.cc" />
     <ClCompile Include="..\gdk\gdkmm\device.cc" />
-	<ClCompile Include="..\gdk\gdkmm\devicemanager.cc" />
+    <ClCompile Include="..\gdk\gdkmm\devicemanager.cc" />
     <ClCompile Include="..\gdk\gdkmm\display.cc" />
     <ClCompile Include="..\gdk\gdkmm\displaymanager.cc" />
     <ClCompile Include="..\gdk\gdkmm\dragcontext.cc" />
@@ -210,7 +210,7 @@
     <ClCompile Include="..\gdk\gdkmm\rectangle.cc" />
     <ClCompile Include="..\gdk\gdkmm\rgba.cc" />
     <ClCompile Include="..\gdk\gdkmm\screen.cc" />
-	<ClCompile Include="..\gdk\gdkmm\timecoord.cc" />
+    <ClCompile Include="..\gdk\gdkmm\timecoord.cc" />
     <ClCompile Include="..\gdk\gdkmm\types.cc" />
     <ClCompile Include="..\gdk\gdkmm\visual.cc" />
     <ClCompile Include="..\gdk\gdkmm\window.cc" />
@@ -222,7 +222,7 @@
     <ClInclude Include="..\gdk\gdkmm\colormap.h" />
     <ClInclude Include="..\gdk\gdkmm\cursor.h" />
     <ClInclude Include="..\gdk\gdkmm\device.h" />
-	<ClInclude Include="..\gdk\gdkmm\devicemanager.h" />
+    <ClInclude Include="..\gdk\gdkmm\devicemanager.h" />
     <ClInclude Include="..\gdk\gdkmm\display.h" />
     <ClInclude Include="..\gdk\gdkmm\displaymanager.h" />
     <ClInclude Include="..\gdk\gdkmm\dragcontext.h" />
@@ -239,7 +239,7 @@
     <ClInclude Include="..\gdk\gdkmm\region.h" />
     <ClInclude Include="..\gdk\gdkmm\rgba.h" />
     <ClInclude Include="..\gdk\gdkmm\screen.h" />
-	<ClInclude Include="..\gdk\gdkmm\timecoord.h" />
+    <ClInclude Include="..\gdk\gdkmm\timecoord.h" />
     <ClInclude Include="..\gdk\gdkmm\types.h" />
     <ClInclude Include="..\gdk\gdkmm\visual.h" />
     <ClInclude Include="..\gdk\gdkmm\window.h" />

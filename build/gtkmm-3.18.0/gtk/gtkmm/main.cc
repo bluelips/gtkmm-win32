@@ -28,7 +28,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+extern "C" {
 #include <glib.h>
+}
+
 #include <gtkmmconfig.h>
 #include <gtkmm/main.h>
 #include <gtkmm/window.h>

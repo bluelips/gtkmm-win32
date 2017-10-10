@@ -25,13 +25,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+extern "C" {
 #include <glib.h>
+#include <gtk/gtk.h>
+}
+
 #include <gtkmm/button.h>
 #include <gtkmm/togglebutton.h>
 #include <gtkmm/radiobutton.h>
 //#include <gtkmm/image.h>
 #include <gtkmm/label.h>
-#include <gtk/gtk.h>
 
 namespace Gtk
 {

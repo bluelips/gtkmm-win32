@@ -26,9 +26,10 @@
 
 #include <glibmm/vectorutils.h>
 
+extern "C" {
 #include <gtk/gtk.h>
-
 #include <glib.h>
+}
 
 namespace // anonymous
 {

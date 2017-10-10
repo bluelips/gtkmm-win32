@@ -24,9 +24,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+extern "C" {
 #include <gtk/gtk.h>
 #include <glib.h>
-
+}
 
 namespace Gtk
 {

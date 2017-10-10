@@ -26,8 +26,11 @@
 
 #include <glibmm/vectorutils.h>
 
+extern "C" {
 #include <gtk/gtk.h>
 #include <glib.h>
+}
+
 #include <gtkmm/textmark.h>
 #include <gtkmm/textiter.h>
 
