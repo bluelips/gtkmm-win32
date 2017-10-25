@@ -19,7 +19,6 @@
 #include "config.h"
 #endif
 
-#define GTKMM_BUILD
 #include <gtkmm/cellrenderertext.h>
 #include <gtkmm/treeviewcolumn.h>
 #include <glibmm/bytes.h>

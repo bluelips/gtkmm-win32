@@ -28,20 +28,26 @@
 #endif
 
 #ifdef GTKMM_DLL
+//#pragma message("In GTKMM_DLL")
 # if defined(GTKMM_BUILD) && defined(_WINDLL)
-//#  if defined(_MSC_VER)
-//#   define GTKMM_API __declspec(dllimport)
-//#  else /* defined(_MSC_VER) */
-/*  Do not dllexport as it is handled by gendef on MSVC. */
+//#pragma message("In defined(GTKMM_BUILD) && defined(_WINDLL)")
+#  if defined(_MSC_VER)
+//#pragma message("In defined(_MSC_VER) && defined(GTKMM_BUILD) && defined(_WINDLL)")
+#   define GTKMM_API __declspec(dllexport)
+#  else // defined(_MSC_VER)
+//#pragma message("In !defined(_MSC_VER) && defined(GTKMM_BUILD) && defined(_WINDLL)")
 #   define GTKMM_API
-//#  endif /* defined(_MSC_VER) */
+#  endif // defined(_MSC_VER)
 # elif !defined(GTKMM_BUILD)
+//#pragma message("In # elif !defined(GTKMM_BUILD)")
 #  define GTKMM_API __declspec(dllimport)
 # else
-   /* Build a static library. */
+//#pragma message("In first gtkmm empty else")
+/* Build a static library. */
 #  define GTKMM_API
 # endif /* GTKMM_BUILD - _WINDLL */
 #else
+//#pragma message("In second gtkmm empty else")
 # define GTKMM_API
 #endif /* GTKMM_DLL */
 
