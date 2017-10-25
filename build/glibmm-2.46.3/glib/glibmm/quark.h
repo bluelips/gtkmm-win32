@@ -23,7 +23,9 @@
 
 #include <glibmmconfig.h>
 #include <glibmm/ustring.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 namespace Glib
 {

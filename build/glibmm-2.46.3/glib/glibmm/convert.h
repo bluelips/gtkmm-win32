@@ -25,7 +25,9 @@
 #include <glibmmconfig.h>
 #include <glibmm/error.h>
 #include <glibmm/ustring.h>
+extern "C"  {
 #include <glib.h> /* for gsize */
+ }
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
 extern "C" { typedef struct _GIConv* GIConv; }

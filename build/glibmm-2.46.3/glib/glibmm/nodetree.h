@@ -30,7 +30,9 @@
 #include <glibmm/ustring.h>
 #include <glibmm/error.h>
 #include <glibmm/arrayhandle.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 namespace Glib
 {

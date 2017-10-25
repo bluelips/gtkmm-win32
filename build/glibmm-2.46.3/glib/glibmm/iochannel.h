@@ -23,7 +23,9 @@
 
 
 #include <glibmmconfig.h>
+extern "C"  {
 #include <glib.h> //For the GIOChannel enum values.
+ }
 #include <glibmm/error.h>
 #include <glibmm/refptr.h>
 #include <glibmm/ustring.h>

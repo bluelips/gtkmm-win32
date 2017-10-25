@@ -24,7 +24,9 @@
  */
 
 #include <glibmm/binding.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 namespace
 {

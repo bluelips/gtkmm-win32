@@ -20,7 +20,9 @@
  */
 
 #include <string>
+extern "C"  {
 #include <glib.h>
+ }
 
 namespace Glib
 {

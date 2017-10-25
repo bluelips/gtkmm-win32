@@ -2,7 +2,7 @@
 
 This batch file helps you build GTKMM library stack for Windows using Visual Studio.
 
-You must build GTK+ before using [this](https://github.com/hispid/gtk-win32) script.
+You must build GTK+ before using [this](https://github.com/bluelips/gtk-win32) script.
 
 ## Building
 

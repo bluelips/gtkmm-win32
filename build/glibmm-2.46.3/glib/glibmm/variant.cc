@@ -26,7 +26,9 @@
 
 #include <glibmm/variant.h>
 #include <glibmm/utility.h>
+extern "C"  {
 #include <glib.h>
+ }
 #include <iostream>
 
 namespace Glib

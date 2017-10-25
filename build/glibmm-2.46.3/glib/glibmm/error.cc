@@ -21,7 +21,9 @@
 #include <glibmm/error.h>
 #include <glibmm/wrap.h>
 #include <glibmm/wrap_init.h>
+extern "C"  {
 #include <glib.h>
+ }
 #include <map>
 
 namespace

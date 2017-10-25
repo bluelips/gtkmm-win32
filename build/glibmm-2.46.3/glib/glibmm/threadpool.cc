@@ -21,7 +21,9 @@
 #include <glibmm/threadpool.h>
 #include <glibmm/exceptionhandler.h>
 #include <glibmm/threads.h>
+extern "C"  {
 #include <glib.h>
+ }
 #include <list>
 
 namespace Glib

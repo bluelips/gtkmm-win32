@@ -28,7 +28,9 @@
 
 //#include <glib/gtestutils.h> //For g_assert() in glib >= 2.15.0
 //#include <glib/gmessages.h> //For g_assert() in glib < 2.15.0
+extern "C"  {
 #include <glib.h> //For g_assert() in all versions of glib.
+ }
 
 #include <glibmm/utility.h>
 

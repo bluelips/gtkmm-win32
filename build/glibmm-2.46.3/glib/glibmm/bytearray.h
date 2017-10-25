@@ -27,7 +27,9 @@
 #include <glibmm/refptr.h>
 #include <glibmm/value.h>
 #include <glibmm/wrap.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
 typedef struct _GByteArray GByteArray;

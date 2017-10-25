@@ -37,7 +37,9 @@
 #define GLIBMM_G_DISABLE_DEPRECATED_UNDEFED 1
 #endif
 
+extern "C"  {
 #include <glib.h>
+ }
 
 // Redefine G_DISABLE_DEPRECATED if it was defined before we temporarily undefed it:
 #if defined(GLIBMM_G_DISABLE_DEPRECATED_UNDEFED)

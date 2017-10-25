@@ -27,7 +27,9 @@
  */
 
 #include <gio/gio.h>
+extern "C"  {
 #include <glib.h>
+ }
 #include <glibmm/error.h>
 #include <glibmm/exceptionhandler.h>
 #include "slot_async.h"

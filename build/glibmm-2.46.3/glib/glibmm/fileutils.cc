@@ -24,7 +24,9 @@
  * Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
+extern "C"  {
 #include <glib.h>
+ }
 #include <glibmm/utility.h>
 
 

@@ -23,7 +23,9 @@
 
 #include <glibmmconfig.h>
 #include <glibmm/unicode.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 #include <iosfwd>
 #include <iterator>

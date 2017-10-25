@@ -20,7 +20,9 @@
  */
 
 #include <glibmmconfig.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 // Some stuff that's useful when debugging gtkmm internals:
 

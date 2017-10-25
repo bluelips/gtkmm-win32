@@ -21,7 +21,9 @@
 #include <glibmmconfig.h>
 #include <glibmm/stringutils.h>
 #include <glibmm/utility.h>
+extern "C"  {
 #include <glib.h>
+ }
 #include <cerrno>
 #include <stdexcept>
 

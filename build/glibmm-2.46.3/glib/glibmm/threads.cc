@@ -30,7 +30,9 @@
  */
 
 #include <glibmm/exceptionhandler.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 /* Why reinterpret_cast<Thread*>(gobject) is needed:
  *

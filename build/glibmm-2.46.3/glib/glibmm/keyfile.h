@@ -27,7 +27,9 @@
 #include <glibmm/arrayhandle.h>
 #include <glibmm/error.h>
 #include <glibmm/utility.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
 extern "C" { typedef struct _GKeyFile GKeyFile; }

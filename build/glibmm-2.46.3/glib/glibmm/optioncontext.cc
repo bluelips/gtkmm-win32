@@ -26,7 +26,9 @@
 
 #include <glibmm/utility.h>
 #include <glibmm/exceptionhandler.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 namespace Glib
 {

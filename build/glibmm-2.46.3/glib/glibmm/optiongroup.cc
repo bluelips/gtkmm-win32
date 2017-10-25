@@ -29,7 +29,9 @@
 #include <glibmm/utility.h>
 #include <glibmm/exceptionhandler.h>
 //#include <glibmm/containers.h>
+extern "C"  {
 #include <glib.h> // g_malloc
+ }
 #include <cstring> // std::memset()
 
 namespace Glib

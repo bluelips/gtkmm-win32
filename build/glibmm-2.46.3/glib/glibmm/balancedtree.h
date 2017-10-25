@@ -26,7 +26,10 @@
 #include <glibmm/ustring.h>
 #include <glibmm/error.h>
 #include <glibmm/arrayhandle.h>
-#include <glib.h>
+extern "C"  {
+#include <glib.h>  
+}
+
 
 namespace Glib
 {

@@ -19,7 +19,9 @@
 
 #include <glibmm/streamiochannel.h>
 #include <glibmm/main.h> //For Source
+extern "C"  {
 #include <glib.h>
+ }
 #include <fstream>
 #include <iostream>
 

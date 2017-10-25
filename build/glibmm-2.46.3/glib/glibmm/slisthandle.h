@@ -21,7 +21,9 @@
 
 #include <glibmmconfig.h>
 #include <glibmm/containerhandle_shared.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 namespace Glib
 {

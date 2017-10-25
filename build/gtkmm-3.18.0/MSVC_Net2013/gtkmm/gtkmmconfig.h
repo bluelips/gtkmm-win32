@@ -29,12 +29,16 @@
 
 #ifdef GTKMM_DLL
 # if defined(GTKMM_BUILD) && defined(_WINDLL)
-/* Do not dllexport as it is handled by gendef on MSVC. */
-#  define GTKMM_API
+//#  if defined(_MSC_VER)
+//#   define GTKMM_API __declspec(dllimport)
+//#  else /* defined(_MSC_VER) */
+/*  Do not dllexport as it is handled by gendef on MSVC. */
+#   define GTKMM_API
+//#  endif /* defined(_MSC_VER) */
 # elif !defined(GTKMM_BUILD)
 #  define GTKMM_API __declspec(dllimport)
 # else
-/* Build a static library. */
+   /* Build a static library. */
 #  define GTKMM_API
 # endif /* GTKMM_BUILD - _WINDLL */
 #else
@@ -42,3 +46,4 @@
 #endif /* GTKMM_DLL */
 
 #endif /* !_GTKMM_CONFIG_H */
+    

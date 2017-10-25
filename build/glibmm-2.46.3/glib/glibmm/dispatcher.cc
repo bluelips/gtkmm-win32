@@ -26,7 +26,9 @@
 
 #include <cerrno>
 #include <fcntl.h>
+extern "C"  { 
 #include <glib.h>
+}
 #include <set>
 
 #ifdef G_OS_WIN32

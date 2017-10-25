@@ -24,7 +24,9 @@
 
 #include <glibmmconfig.h>
 #include <glibmm/ustring.h>
+extern "C"  {
 #include <glib.h>
+ }
 #include <ctime>
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS

@@ -25,7 +25,9 @@
 #include <glibmm/quark.h>
 #include <glibmm/wrap.h>
 #include <vector>
+extern "C"  {
 #include <glib.h>
+}
 #include <glib-object.h>
 
 namespace

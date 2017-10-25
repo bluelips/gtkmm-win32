@@ -27,7 +27,9 @@
 #include <glibmm/ustring.h>
 #include <glibmm/error.h>
 #include <glibmm/arrayhandle.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
 typedef struct _GRegex GRegex;

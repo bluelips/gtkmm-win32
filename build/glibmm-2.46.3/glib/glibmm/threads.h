@@ -24,7 +24,9 @@
  */
 
 
+extern "C"  {
 #include <glib.h>
+ }
 #include <glibmm/error.h>
 #include <sigc++/sigc++.h>
 #include <string>

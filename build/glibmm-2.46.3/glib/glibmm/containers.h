@@ -23,7 +23,9 @@
 #include <glibmmconfig.h>
 #include <glibmm/sarray.h> /* for backward compatibility */
 #include <glibmm/wrap.h>
+extern "C"  {
 #include <glib.h>
+ }
 #include <iterator>
 #include <cstddef>
 

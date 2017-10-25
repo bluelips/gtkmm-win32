@@ -21,7 +21,9 @@
 
 #include <glibmmconfig.h>
 #include <glibmm/exception.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 
 

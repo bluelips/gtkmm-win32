@@ -24,7 +24,9 @@
 
 #include <glibmm/arrayhandle.h>
 #include <glibmm/error.h>
+extern "C"  {
 #include <glib.h>
+ }
 #include <string>
 
 namespace Glib

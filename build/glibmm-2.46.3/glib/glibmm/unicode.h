@@ -22,7 +22,9 @@
  */
 
 extern "C" {
+extern "C"  {
 #include <glib.h>
+ }
 }
 
 // Not used, but we want to get rid of possible <ctype.h> macros.

@@ -23,7 +23,9 @@
 #include <glibmm/threads.h>
 #include <glibmm/error.h>
 #include <glibmm/exceptionhandler.h>
+extern "C"  {
 #include <glib.h>
+ }
 #include <exception>
 #include <list>
 

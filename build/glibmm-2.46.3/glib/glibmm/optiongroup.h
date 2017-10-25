@@ -26,7 +26,9 @@
 #include <sigc++/slot.h>
 #include <map>
 #include <vector>
+extern "C"  {
 #include <glib.h> //TODO: Try to hide this.
+ }
 
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS

@@ -20,7 +20,9 @@
  */
 
 #include <glibmmconfig.h>
+extern "C"  {
 #include <glib.h>
+ }
 #include <utility>
 
 namespace Glib

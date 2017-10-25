@@ -20,7 +20,9 @@
 
 #include <glibmmconfig.h>
 #include <glibmm/ustring.h>
+extern "C"  {
 #include <glib.h>
+ }
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
 

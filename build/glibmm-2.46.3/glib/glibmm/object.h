@@ -33,7 +33,9 @@
 #include <glibmm/utility.h> /* Could be private, but that would be tedious. */
 #include <glibmm/containerhandle_shared.h> /* Because its specializations may be here. */
 #include <glibmm/value.h>
+extern "C"  {
 #include <glib.h> /* for G_GNUC_NULL_TERMINATED */
+ }
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
 extern "C"
