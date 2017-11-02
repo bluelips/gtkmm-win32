@@ -6,6 +6,8 @@
 #include <glibmm/spawn.h>
 #include <glibmm/private/spawn_p.h>
 
+#include <stdio.h>
+
 
 /* Copyright (C) 2002 The gtkmm Development Team
  *
@@ -84,6 +86,8 @@ void spawn_async_with_pipes(const std::string& working_directory,
                             int* standard_output,
                             int* standard_error)
 {
+    printf("Glib: Spawning in working directory: %s! std::string was %d with sizeof %u addr %u\n", 
+        working_directory.c_str(), working_directory.size(), sizeof(working_directory), &working_directory);
   const bool setup_slot = !child_setup.empty();
   auto child_setup_ = child_setup;
   GError* gerror = nullptr;
